@@ -39,5 +39,8 @@ RUN npm run precompile 2>/dev/null || true
 # 创建数据目录
 RUN mkdir -p /app/data /app/plugins /app/logs /app/assets
 
+# 环境变量
+ENV NODE_ENV=production
+
 # 启动命令
 CMD ["npm", "start"]
