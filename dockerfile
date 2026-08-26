@@ -39,9 +39,5 @@ RUN npm run precompile 2>/dev/null || true
 # 创建数据目录
 RUN mkdir -p /app/data /app/plugins /app/logs /app/assets
 
-# 配置 PM2 并保存
-RUN pm2 start "npm start" --name telebox-next --no-daemon \
- && pm2 save
-
-# 使用 pm2-runtime 作为入口（正确处理信号）
-CMD ["pm2-runtime", "telebox-next"]
+# 启动命令
+CMD ["npm", "start"]
