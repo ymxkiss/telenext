@@ -37,7 +37,7 @@ WORKDIR /app
 
 
 # 克隆项目
-RUN git clone https://github.com/TeleBoxOrg/TeleBox-Next.git /app
+RUN git clone https://github.com/TeleBoxOrg/TeleBox-Next.git .
 
 # 步骤5：安装依赖（跳过预编译脚本）
 RUN npm ci --ignore-scripts --no-optional
